@@ -1,4 +1,6 @@
 # Content Management System - World Wildlife Fund
+### Disclaimer
+This is for a school project and is not the real World Wildlife Fund Website. The real WWF site can be found [here](https://www.worldwildlife.org/)
 
 ### Project Introduction
 

@@ -1,1 +1,5 @@
-console.log('js loaded');
+$ = jQuery;
+
+jQuery(document).ready(function(){
+    console.log('Ready');
+})

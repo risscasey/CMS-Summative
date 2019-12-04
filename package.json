@@ -1,0 +1,26 @@
+{
+  "name": "larissa-casey-wwf-cms",
+  "version": "1.0.0",
+  "description": "This project included building a Custom Content Management System to fit the needs of the WWF Content Administrators. Alongside the CMS, we were to redesign and build a new website aiming to increase awareness of their cause and further it through education and engagement.",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risscasey/CMS-Summative.git"
+  },
+  "author": "Larissa Casey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risscasey/CMS-Summative/issues"
+  },
+  "homepage": "https://github.com/risscasey/CMS-Summative#readme"
+}

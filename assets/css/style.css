@@ -1,3 +1,174 @@
-body {
-    background-color: pink;
+* {
+    font-family:'Avenir';
+}
+
+.deafultNavLinks a {
+    margin-right: 2rem;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+#donateBtn {
+    font-weight: bold;
+}
+
+#landingRow, #landingColumn {
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 0;
+}
+
+.blackOpaqueBG {
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.landingLinkTitle {
+    font-size: 1em;
+}
+
+.btn-success{
+    background-color: #45817D;
+    border-color: #45817D;
+}
+
+#footerImg {
+    background-image: url('../img/footerImg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footerOpacity {
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.bottomNavLinks {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    list-style-position: inside;
+}
+
+.bottomNavLinks li a{
+    color: white;
+}
+
+.LCCMS_product {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 2rem;
+}
+
+.LCCMS_product  h2 {
+    color: black;
+    text-align: center;
+}
+
+.LCCMS_product  span {
+    color: black;
+    text-align: center;
+}
+
+.woocommerce a.button {
+    color: white;
+    text-align: center;
+    background-color: #222f3e;
+    border-radius: 0;
+    margin: 2rem 2rem 1rem 2rem;
+    font-size: .8em;
+}
+
+.LCCMS_shopResults {
+    display: none;
+}
+
+.woocommerce-ordering {
+    padding-bottom: 30px;
+}
+
+
+.woocommerce-tabs ul {
+    display: none;
+}
+
+.product_meta {
+    display: none;
+}
+
+form .single_add_to_cart_button {
+    border-radius: 0;
+}
+
+.LCCMS_singleAddToCard {
+    border-radius: 0 !important;
+    border: none !important;
+    background-color: #192a56 !important;
+    padding: .55rem !important;
+    font-size: 0.8em !important;
+}
+
+ .LCCMS_product a {
+    text-align: center;
+    color: #007bff;
+    padding-bottom: 2rem;
+}
+
+.return-to-shop {
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+}
+
+.LCCMS_proceedToCheckBtn {
+    background-color: #222f3e !important;
+    margin: 0 !important;
+}
+
+#order_review_heading {
+    display: none !important;
+    margin-top: 20rem !important;
+}
+
+.input-text {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.woocommerce form .form-row-first {
+    width: 100%;
+    float: none !important;
+}
+
+.woocommerce form .form-row-last {
+    width: 100%;
+    float: none !important;
+}
+
+.form-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+}
+
+.carouselBtns {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.carousel-control-next {
+    position: relative;
+}
+
+.carousel-control-prev {
+    position: relative;
 }

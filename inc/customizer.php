@@ -34,6 +34,7 @@ function mytheme_customize_register( $wp_customize ) {
 
    $wp_customize->add_setting( 'LCCMS_homeNavTextSetting' , array(
        'transport' => 'refresh',
+       'default' => '#ffffff'
    ));
 
    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'homeNavText', array(
@@ -159,35 +160,16 @@ function mytheme_customize_register( $wp_customize ) {
 
     //--------------------------------------
 
-
-
-
-
-    $wp_customize->add_section( 'LCCMS_landingImgSection' , array(
-       'title'      => __( 'Landing Image', 'LarissaCaseyCMS' ),
-       'priority'   => 4,
-    ));
-
-    $wp_customize->add_setting( 'LCCMS_landingImgSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'landingImg', array(
-        'label'      => __( 'Landing Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_landingImgSection',
-        'settings'   => 'LCCMS_landingImgSetting',
-    )));
-
-
-
-
-
-    //--------------------------------------
-
     $wp_customize->add_section( 'LCCMS_landingTextSection' , array(
        'title'      => __( 'Landing Text', 'LarissaCaseyCMS' ),
        'priority'   => 5,
     ));
+
+    $wp_customize->add_setting( 'LCCMS_LandingTitleSetting' , array(
+        'transport' => 'refresh',
+    ));
+
+    //--------------------------------------
 
     $wp_customize->add_setting( 'LCCMS_LandingTitleSetting' , array(
         'transport' => 'refresh',
@@ -250,7 +232,7 @@ function mytheme_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingBtn', array(
-        'label'      => __( 'Landing Title', 'LarissaCaseyCMS' ),
+        'label'      => __( 'Landing Button', 'LarissaCaseyCMS' ),
         'section'    => 'LCCMS_landingBtnSection',
         'settings'   => 'LCCMS_LandingBtnSetting',
         'type'       => 'radio',
@@ -264,6 +246,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'LCCMS_LandingBtnTextSetting' , array(
         'transport' => 'refresh',
+        'default' => '#222f3e'
     ));
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingBtnText', array(
@@ -275,8 +258,22 @@ function mytheme_customize_register( $wp_customize ) {
 
     //--------------------------------------
 
+    $wp_customize->add_setting( 'LCCMS_LandingBtnLinkSetting' , array(
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingBtnLink', array(
+        'label'      => __( 'Landing Button Link', 'LarissaCaseyCMS' ),
+        'section'    => 'LCCMS_landingBtnSection',
+        'settings'   => 'LCCMS_LandingBtnLinkSetting',
+        'type'       => 'text'
+    )));
+
+    //--------------------------------------
+
     $wp_customize->add_setting( 'LCCMS_LandingBtnTextColourSetting' , array(
         'transport' => 'refresh',
+        'default' => '#222f3e'
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'landingBtnTextColour', array(
@@ -292,322 +289,10 @@ function mytheme_customize_register( $wp_customize ) {
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'landingBtnBGColour', array(
-        'label'      => __( 'Landing Text Colour', 'LarissaCaseyCMS' ),
+        'label'      => __( 'Landing Button Background Colour', 'LarissaCaseyCMS' ),
         'section'    => 'LCCMS_landingBtnSection',
         'settings'   => 'LCCMS_LandingBtnBGColourSetting',
     )));
-
-    //--------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $wp_customize->add_section( 'LCCMS_Footer' , array(
-       'title'      => __( 'Footer Section', 'LarissaCaseyCMS' ),
-       'priority'   => 7,
-    ));
-
-    $wp_customize->add_setting( 'LCCMS_LandingBtnSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footerBg', array(
-        'label'      => __( 'Landing Title', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_landingBtnSection',
-        'settings'   => 'LCCMS_LandingBtnSetting',
-        'type'       => 'radio',
-        'choices'    => array(
-             'On' => __( 'On' ),
-             'Off'  => __( 'Off' )
-         )
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_section( 'LCCMS_carouselSection' , array(
-       'title'      => __( 'Carousel Section', 'LarissaCaseyCMS' ),
-       'priority'   => 8,
-    ));
-
-    $wp_customize->add_setting( 'LCCMS_carouselSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'carousel', array(
-        'label'      => __( 'Carousel on Home', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselSection',
-        'settings'   => 'LCCMS_carouselSetting',
-        'type'       => 'radio',
-        'choices'    => array(
-             'On' => __( 'On' ),
-             'Off'  => __( 'Off' )
-         )
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselBtnSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'carouselBtn', array(
-        'label'      => __( 'Carousel Buttons', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselSection',
-        'settings'   => 'LCCMS_carouselBtnSetting',
-        'type'       => 'radio',
-        'choices'    => array(
-             'On' => __( 'On' ),
-             'Off'  => __( 'Off' )
-         )
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselCardTextSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'carouselCardText', array(
-        'label'      => __( 'Carousel Content (Text on Cards', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselSection',
-        'settings'   => 'LCCMS_carouselBtnSetting',
-        'type'       => 'radio',
-        'choices'    => array(
-             'On' => __( 'On' ),
-             'Off'  => __( 'Off' )
-         )
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselBtnBGSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'carouselBtnBG', array(
-        'label'      => __( 'Carousel Button Colour', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselSection',
-        'settings'   => 'LCCMS_carouselBtnBGSetting'
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselBtnTextSetting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'carouselBtntext', array(
-        'label'      => __( 'Carousel Button Text', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselSection',
-        'settings'   => 'LCCMS_carouselBtnTextSetting'
-    )));
-
-    //--------------------------------------
-
-
-    $wp_customize->add_section( 'LCCMS_carouselImageSection' , array(
-       'title'      => __( 'Carousel Image Section', 'LarissaCaseyCMS' ),
-       'priority'   => 9,
-    ));
-
-    $wp_customize->add_setting( 'LCCMS_carouselImage1Setting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img1', array(
-        'label'      => __( 'First Carousel Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselImageSection',
-        'settings'   => 'LCCMS_carouselImage1Setting',
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselImage2Setting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img2', array(
-        'label'      => __( 'Second Carousel Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselImageSection',
-        'settings'   => 'LCCMS_carouselImage2Setting',
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselImage3Setting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img3', array(
-        'label'      => __( 'Third Carousel Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselImageSection',
-        'settings'   => 'LCCMS_carouselImage3Setting',
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselImage4Setting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img4', array(
-        'label'      => __( 'Fourth Carousel Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselImageSection',
-        'settings'   => 'LCCMS_carouselImage4Setting',
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselImage5Setting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img5', array(
-        'label'      => __( 'Fith Carousel Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselImageSection',
-        'settings'   => 'LCCMS_carouselImage5Setting',
-    )));
-
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_carouselImage6Setting' , array(
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'img6', array(
-        'label'      => __( 'Sixth Carousel Image', 'LarissaCaseyCMS' ),
-        'section'    => 'LCCMS_carouselImageSection',
-        'settings'   => 'LCCMS_carouselImage6Setting',
-    )));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // //--------------------------------------
-    //
-    //
-    // $wp_customize->add_section( 'LCCMS_carouselImageSection' , array(
-    //    'title'      => __( 'Carousel Image Section', 'LarissaCaseyCMS' ),
-    //    'priority'   => 9,
-    // ));
-    //
-    // $wp_customize->add_setting( 'LCCMS_carouselImage1Setting' , array(
-    //     'transport' => 'refresh',
-    // ));
-    //
-    // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'img1', array(
-    //     'label'      => __( 'First Carousel Image', 'LarissaCaseyCMS' ),
-    //     'section'    => 'LCCMS_carouselImageSection',
-    //     'settings'   => 'LCCMS_carouselImage1Setting',
-    // )));
-    //
-    // //--------------------------------------
-    //
-    // $wp_customize->add_setting( 'LCCMS_carouselImage2Setting' , array(
-    //     'transport' => 'refresh',
-    // ));
-    //
-    // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'img2', array(
-    //     'label'      => __( 'Second Carousel Image', 'LarissaCaseyCMS' ),
-    //     'section'    => 'LCCMS_carouselImageSection',
-    //     'settings'   => 'LCCMS_carouselImage2Setting',
-    // )));
-    //
-    // //--------------------------------------
-    //
-    // $wp_customize->add_setting( 'LCCMS_carouselImage3Setting' , array(
-    //     'transport' => 'refresh',
-    // ));
-    //
-    // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'img3', array(
-    //     'label'      => __( 'Third Carousel Image', 'LarissaCaseyCMS' ),
-    //     'section'    => 'LCCMS_carouselImageSection',
-    //     'settings'   => 'LCCMS_carouselImage3Setting',
-    // )));
-    //
-    // //--------------------------------------
-    //
-    // $wp_customize->add_setting( 'LCCMS_carouselImage4Setting' , array(
-    //     'transport' => 'refresh',
-    // ));
-    //
-    // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'img4', array(
-    //     'label'      => __( 'Fourth Carousel Image', 'LarissaCaseyCMS' ),
-    //     'section'    => 'LCCMS_carouselImageSection',
-    //     'settings'   => 'LCCMS_carouselImage4Setting',
-    // )));
-    //
-    // //--------------------------------------
-    //
-    // $wp_customize->add_setting( 'LCCMS_carouselImage5Setting' , array(
-    //     'transport' => 'refresh',
-    // ));
-    //
-    // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'img5', array(
-    //     'label'      => __( 'Fith Carousel Image', 'LarissaCaseyCMS' ),
-    //     'section'    => 'LCCMS_carouselImageSection',
-    //     'settings'   => 'LCCMS_carouselImage5Setting',
-    // )));
-    //
-    // //--------------------------------------
-    //
-    // $wp_customize->add_setting( 'LCCMS_carouselImage6Setting' , array(
-    //     'transport' => 'refresh',
-    // ));
-    //
-    // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'img6', array(
-    //     'label'      => __( 'Sixth Carousel Image', 'LarissaCaseyCMS' ),
-    //     'section'    => 'LCCMS_carouselImageSection',
-    //     'settings'   => 'LCCMS_carouselImage6Setting',
-    // )));
-
-
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
@@ -631,6 +316,10 @@ function mytheme_customize_css()
 
             #donateBtn {
                 background-color: <?php echo get_theme_mod('LCCMS_navBtnBGColourSetting', '#f8f9fa');?> !important;
+            }
+
+            .topNavLinks a {
+                color: <?php echo get_theme_mod('LCCMS_homeNavTextSetting', '#ffffff');?> !important;
             }
 
             #donateBtn a{
@@ -673,14 +362,7 @@ function mytheme_customize_css()
             }
 
             #landingBtn a{
-                color: <?php echo get_theme_mod('LCCMS_LandingBtnTextColourSetting', '#000000');?> !important;
-            }
-
-            #hederImage{
-                background-image: url('<?php echo get_theme_mod('LCCMS_landingImgSetting'); ?>');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+                color: <?php echo get_theme_mod('LCCMS_LandingBtnTextColourSetting', '#222f3e');?> !important;
             }
 
             .carouselBtn {

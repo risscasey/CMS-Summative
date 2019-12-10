@@ -1,16 +1,14 @@
 <?php
 
-require get_parent_theme_file_path('educational_alert.php');
-
 function addCustomThemeFiles_LarissaCaseyCMS(){
     wp_enqueue_style('bootstrapCSS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.3.1', 'all');
 
     wp_enqueue_style('bootstrapCSS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.3.1', 'all');
 
-    wp_enqueue_style('customCSS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/css/style.css', array(), '0.0.1', 'all');
+    wp_enqueue_style('customCSS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.2', 'all');
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrapJS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '4.3.1', true );
-    wp_enqueue_script('customJS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '0.0.1', true );
+    wp_enqueue_script('customJS_LarissaCaseyCMS', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0.2', true );
 };
 add_action('wp_enqueue_scripts', 'addCustomThemeFiles_LarissaCaseyCMS');
 
@@ -27,4 +25,25 @@ function addCustomMenus_1902(){
 add_action('after_setup_theme', 'addCustomMenus_1902');
 
 
+
+register_default_headers( array(
+    'defaultImage' => array(
+        'url'           => get_template_directory_uri() . '/assets/img/lions_grass.jpegg',
+        'thumbnail_url' => get_template_directory_uri() . '/assets/img/lions_grass.jpeg',
+        'description'   => __( 'The default image for the custom header.', 'LCCMS' )
+    )
+) );
+$customHeaderDefaults = array(
+    'width' => 1280,
+    'height' => 720,
+    'default-image' => get_template_directory_uri() . '/assets/img/lions_grass.jpeg'
+);
+add_theme_support('custom-header', $customHeaderDefaults);
+
+
+
+
+
 require_once get_template_directory() . '/inc/customizer.php';
+
+require get_parent_theme_file_path('./addons/educational_alert.php');

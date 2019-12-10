@@ -11,7 +11,7 @@
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                                 <?php if (get_theme_mod('LCCMS_navLogoSetting')): ?>
-                                    <div id="navBannerBG" class="py-2 px-1 mx-3 d-flex justify-content-center shadow" style="width:6%;">
+                                    <div id="navBannerBG" class="py-2 px-1 mx-3 shadow" style="width:6%;">
                                         <img src="<?php echo get_theme_mod('LCCMS_navLogoSetting') ?>" class="w-50 py-2" alt="">
                                     </div>
                                 <?php else: ?>

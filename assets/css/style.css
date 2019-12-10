@@ -33,6 +33,12 @@
     border-color: #45817D;
 }
 
+#hederImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #footerImg {
     background-image: url('../img/footerImg.jpeg');
     background-position: center;
@@ -171,4 +177,11 @@ form .single_add_to_cart_button {
 
 .carousel-control-prev {
     position: relative;
+}
+
+#navBannerBG {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
 }

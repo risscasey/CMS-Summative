@@ -2,12 +2,12 @@
     <div class="row pb-3">
         <div class="col">
             <?php if (get_theme_mod('LCCMS_navLogoSetting')): ?>
-                <nav class="navbar navbar-expand-md navbar-dark" role="navigation" style="padding:0 !important;">
+                <nav class="navbar navbar-expand-md" role="navigation" style="padding:0 !important;">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top_navigation" aria-controls="top_navigation" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div id="navBannerBG" class="py-4 px-1 mx-3 d-flex justify-content-center shadow" style="width:6%;">
+                        <div id="navBannerBG" class="py-4 px-1 mx-3 shadow" style="width:6%;">
                             <img src="<?php echo get_theme_mod('LCCMS_navLogoSetting') ?>" class="w-75" alt="">
                         </div>
                         <?php

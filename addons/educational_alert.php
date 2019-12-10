@@ -3,12 +3,14 @@
     $realSiteURL = 'https://www.worldwildlife.org/';
     $designerName = 'Larissa Casey';
 
+
 function acknowledgement_styles_custom(){
     ?>
         <style media="screen">
             html,body{
                 overflow: hidden;
             }
+
             #acknowledgeOverlay.overlay{
                 width: 100%;
                 height: 100%;
@@ -19,6 +21,7 @@ function acknowledgement_styles_custom(){
                 z-index: 10000000;
                 display: none;
             }
+
             #overlayContent{
                 position: absolute;
                 top: 50%;
@@ -33,6 +36,7 @@ function acknowledgement_styles_custom(){
                 text-align: center;
                 padding: 16px;
             }
+
             .overlayBtn{
                 display: none;
                 font-weight: 400;
@@ -51,10 +55,12 @@ function acknowledgement_styles_custom(){
                 color: white;
                 text-transform: none;
             }
+
         </style>
 
     <?php
 }
+
 function acknowledgement_script_custom(){
     ?>
     <div id="acknowledgeOverlay" class="overlay">
@@ -78,6 +84,7 @@ function acknowledgement_script_custom(){
         } else {
             document.getElementById("acknowledgeOverlay").style.display = "block";
         }
+
         function checkedInput(){
             var checkbox = document.getElementById('acknowledgeCheckBox');
             if (checkbox.checked == true){
@@ -86,9 +93,10 @@ function acknowledgement_script_custom(){
                 document.getElementById('acknowledgeSubmit').style.display = 'none';
             }
         }
+
         function confirmAcknowledge(){
-            var body = document.getElementsByTagName('body')[0].style.overflow = "scroll";
-            var html = document.getElementsByTagName('html')[0].style.overflow = "scroll";
+            var body = document.getElementsByTagName('body')[0].style.overflow = "unset";
+            var html = document.getElementsByTagName('html')[0].style.overflow = "unset";
             var elem = document.getElementById("acknowledgeOverlay");
             elem.parentNode.removeChild(elem);
             sessionStorage.setItem("acknowledged", true);
@@ -96,6 +104,7 @@ function acknowledgement_script_custom(){
     </script>
     <?php
 }
+
 if( ! is_admin() ){
     add_action('wp_head', 'acknowledgement_styles_custom');
     add_action('wp_footer', 'acknowledgement_script_custom');

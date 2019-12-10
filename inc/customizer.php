@@ -327,7 +327,7 @@ function mytheme_customize_css()
             }
 
             #defaultNavBg {
-                 background-color: <?php echo get_theme_mod('LCCMS_pageNavColourSetting', '#ffffff');?> !important;
+                 background-color: <?php echo get_theme_mod('LCCMS_pageNavColourSetting', '#000000');?> !important;
              }
 
             .deafultNavLinks a {

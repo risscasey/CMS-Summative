@@ -76,8 +76,4 @@
     </div>
 <?php endif; ?>
 
-<?php if (get_theme_mod('LCCMS_carouselSetting') === 'On'): ?>
-    <?php get_template_part('templates/content', 'carousel'); ?>
-<?php endif; ?>
-
-<?php get_footer(); ?>
+<?php wp_footer(); ?>

@@ -1,7 +1,5 @@
 <?php if(has_nav_menu( 'bottom_Nav' )): ?>
 
-
-
     <div class="container-fluid mt-5 p-2">
         <div id="footerImg" class="w-100 shadow-lg">
             <div id="footerOpacity" class="w-100 h-100">

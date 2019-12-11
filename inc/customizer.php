@@ -69,7 +69,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'pageNavBg', array(
        'label'       => __( 'Or, Select a background colour for your Navigation.', 'LarissaCaseyCMS' ),
-       'description' => 'Chnage the Background Colour of oyur top navigation',
+       'description' => 'Change the Background Colour of your top navigation (please note toggler icon is white and will not appear on white backgrounds)',
        'section'     => 'LCCMS_pageNavSection',
        'settings'    => 'LCCMS_pageNavColourSetting',
    )));
@@ -169,12 +169,6 @@ function mytheme_customize_register( $wp_customize ) {
         'transport' => 'refresh',
     ));
 
-    //--------------------------------------
-
-    $wp_customize->add_setting( 'LCCMS_LandingTitleSetting' , array(
-        'transport' => 'refresh',
-    ));
-
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingTitle', array(
         'label'      => __( 'Landing Title', 'LarissaCaseyCMS' ),
         'section'    => 'LCCMS_landingTextSection',
@@ -212,6 +206,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'LCCMS_landingTextColourSetting' , array(
         'transport' => 'refresh',
+        'default' => '#ffffff'
     ));
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'navBtnTextColour', array(
@@ -327,7 +322,7 @@ function mytheme_customize_css()
             }
 
             #defaultNavBg {
-                 background-color: <?php echo get_theme_mod('LCCMS_pageNavColourSetting', '#000000');?> !important;
+                 background-color: <?php echo get_theme_mod('LCCMS_pageNavColourSetting', '343a40');?> !important;
              }
 
             .deafultNavLinks a {

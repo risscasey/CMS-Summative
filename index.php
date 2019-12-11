@@ -10,6 +10,7 @@
             <?php if( have_posts() ): ?>
                 <?php while( have_posts() ): the_post(); ?>
                     <div class="mt-3">
+                        <h2><?php the_title(); ?></h2>
                         <?php if(is_home() || is_search() || is_archive()): ?>
                             <div class="d-flex justify-contwnt-between">
                             <?php elseif(!is_home() || !is_search() || !is_archive()):?>

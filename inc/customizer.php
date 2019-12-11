@@ -167,6 +167,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'LCCMS_LandingTitleSetting' , array(
         'transport' => 'refresh',
+        'default' => 'Catchy Title'
     ));
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingTitle', array(
@@ -180,6 +181,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'LCCMS_LandingSubTitleSetting' , array(
         'transport' => 'refresh',
+        'default' => 'A catchy subtitle to go with my cathy title'
     ));
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingSubTitle', array(
@@ -193,6 +195,7 @@ function mytheme_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'LCCMS_LandingTextSetting' , array(
         'transport' => 'refresh',
+        'default' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'        
     ));
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'landingText', array(

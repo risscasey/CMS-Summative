@@ -13,11 +13,11 @@
 
     <div class="container-fluid d-flex justify-content-between">
         <?php if (get_theme_mod('LCCMS_navLogoSetting')): ?>
-            <div id="navBannerBG" class="py-2 px-1 mx-3 shadow" style="width:6%;">
+            <div id="navBannerBG" class="py-2 px-1 mx-3 shadow" style="width:6%;" href="<?php echo home_url(); ?>">
                 <img src="<?php echo get_theme_mod('LCCMS_navLogoSetting') ?>" class="w-50 py-2" alt="">
             </div>
         <?php else: ?>
-            <a id="defaultNavTitle" class="navbar-brand mr-5" href="#"><?php echo get_bloginfo($show = 'name', $filter = 'raw'); ?></a>
+            <a id="defaultNavTitle" class="navbar-brand mr-5" href="<?php echo home_url(); ?>"><?php echo get_bloginfo($show = 'name', $filter = 'raw'); ?></a>
         <?php endif; ?>
 
         <?php if (has_nav_menu( 'top_nav' )): ?>

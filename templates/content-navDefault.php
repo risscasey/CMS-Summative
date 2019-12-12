@@ -21,9 +21,6 @@
         <?php endif; ?>
 
         <?php if (has_nav_menu( 'top_nav' )): ?>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top_navigation" aria-controls="top_navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <?php
                 wp_nav_menu( array(
